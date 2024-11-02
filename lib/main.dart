@@ -1,3 +1,4 @@
+import 'package:alarm/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +10,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
+    return  MaterialApp(
+      home:  Scaffold(
+        appBar: AppBar(),
+        body: const Center(
           child: Text('Hello World!'),
         ),
       ),
+      theme: ThemeData(scaffoldBackgroundColor: Col.red,
+      appBarTheme: AppBarTheme(color: Col.grey)),
     );
   }
 }
